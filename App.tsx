@@ -280,17 +280,17 @@ const App: React.FC = () => {
     const renderContent = () => {
         switch (view.current) {
             case 'home':
-                return <ProductList onNavigate={handleNavigate} onProductSelect={handleProductSelect} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onBuyNow={handleBuyNow} currency={currency} onQuickView={setQuickViewProduct} />;
+                return <ProductList onNavigate={handleNavigate} onProductSelect={handleProductSelect} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} currency={currency} onQuickView={setQuickViewProduct} />;
             case 'products':
-                return <ShopPage initialCategory={view.payload || 'all'} currency={currency} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onBuyNow={handleBuyNow} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} />;
+                return <ShopPage initialCategory={view.payload || 'all'} currency={currency} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} />;
             case 'productDetail':
                 return <ProductDetailPage product={view.payload} currency={currency} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onBuyNow={handleBuyNow} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} />;
             case 'ofertas':
-                return <OfertasPage currency={currency} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onBuyNow={handleBuyNow} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} />;
+                return <OfertasPage currency={currency} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} />;
             case 'ia':
                 return <AsistenteIAPage cartItems={cartItems} />;
             case 'catalog':
-                return <CatalogPage onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onBuyNow={handleBuyNow} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} currency={currency} />;
+                return <CatalogPage onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onProductSelect={handleProductSelect} onQuickView={setQuickViewProduct} currency={currency} />;
             case 'blog':
                  return <BlogPage posts={blogPosts} onSelectPost={handleSelectPost} />;
             case 'blogPost':
@@ -300,7 +300,7 @@ const App: React.FC = () => {
             case 'myOrders':
                 return <MyOrdersPage currency={currency} onNavigate={handleNavigate} />;
             default:
-                return <ProductList onNavigate={handleNavigate} onProductSelect={handleProductSelect} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} onBuyNow={handleBuyNow} currency={currency} onQuickView={setQuickViewProduct} />;
+                return <ProductList onNavigate={handleNavigate} onProductSelect={handleProductSelect} onAddToCart={handleAddToCart} onQuickAddToCart={handleQuickAddToCart} currency={currency} onQuickView={setQuickViewProduct} />;
         }
     };
     

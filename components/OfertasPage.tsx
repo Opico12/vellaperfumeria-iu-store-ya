@@ -91,7 +91,6 @@ const OfertasPage: React.FC<{
     currency: Currency;
     onAddToCart: (product: Product, buttonElement: HTMLButtonElement | null, selectedVariant: Record<string, string> | null) => void;
     onQuickAddToCart: (product: Product, buttonElement: HTMLButtonElement | null, selectedVariant: Record<string, string> | null) => void;
-    onBuyNow: (product: Product, buttonElement: HTMLButtonElement | null, selectedVariant: Record<string, string> | null) => void;
     onProductSelect: (product: Product) => void;
     onQuickView: (product: Product) => void;
 }> = ({ currency, onAddToCart, onQuickAddToCart, onProductSelect, onQuickView }) => {

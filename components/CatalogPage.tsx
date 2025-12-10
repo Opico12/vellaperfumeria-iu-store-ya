@@ -5,8 +5,8 @@ import { ProductCard } from './ProductCard';
 import type { Product } from './types';
 import type { Currency } from './currency';
 
-// URL del Catálogo 16 actualizada
-const INTERACTIVE_CATALOG_URL = 'https://es-catalogue.oriflame.com/oriflame/es/2025016?HideStandardUI=true&Page=1';
+// URL del Catálogo 17 actualizada (como solicitado)
+const INTERACTIVE_CATALOG_URL = 'https://es-catalogue.oriflame.com/oriflame/es/2025017-brp?HideStandardUI=true&Page=1';
 const FALLBACK_CATALOG_URL = 'https://es.oriflame.com/products/digital-catalogue-current';
 
 interface CatalogPageProps {
@@ -64,7 +64,7 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
         if (!quickAddCode.trim()) return;
 
         const code = parseInt(quickAddCode.trim());
-        const product = allProducts.find(p => p.id === code);
+        const product = allProducts?.find(p => p.id === code);
 
         if (product) {
             onAddToCart(product, buttonRef.current, null);
@@ -86,8 +86,8 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
         }
     };
 
-    // Featured catalog products for the list below
-    const catalogProducts = allProducts.slice(0, 8); 
+    // Featured catalog products for the list below (Safety check added)
+    const catalogProducts = (allProducts || []).slice(0, 8); 
 
     return (
         <div className="w-full px-2 sm:px-4 py-6 bg-gray-50">
@@ -102,9 +102,9 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
                             className="h-20 w-auto object-contain" 
                         />
                         <div className="text-center md:text-left">
-                            <h1 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight font-serif">Catálogo Actual (C16)</h1>
+                            <h1 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight font-serif">Catálogo Actual (C17)</h1>
                             <p className="text-sm text-gray-600 mt-1">
-                                Explora el Catálogo 16 y descubre las mejores ofertas de temporada.
+                                Explora el Catálogo 17 y descubre las mejores ofertas de temporada.
                             </p>
                         </div>
                     </div>
@@ -114,10 +114,12 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
                         style={{ minHeight: '80vh' }} 
                     >
                         <iframe
+                            id="ipaper-catalogue"
                             data-ipaper="true"
+                            data-testid="Presentation-catalogue-ipaper-iframe"
                             src={INTERACTIVE_CATALOG_URL}
                             title="Catálogo Digital BeautyShopVella"
-                            className="w-full h-full absolute inset-0"
+                            className="w-full h-full absolute inset-0 products-app-emotion-z39r5g"
                             frameBorder="0"
                             allowFullScreen
                             loading="lazy"
@@ -197,19 +199,24 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
                     <h2 className="text-3xl font-extrabold text-black tracking-tight">Productos Destacados del Catálogo</h2>
                     <p className="mt-2 text-lg text-gray-600">Compra directamente tus favoritos</p>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                    {catalogProducts.map(product => (
-                        <ProductCard
-                            key={product.id}
-                            product={product}
-                            currency={currency}
-                            onAddToCart={onAddToCart}
-                            onQuickAddToCart={onQuickAddToCart}
-                            onProductSelect={onProductSelect}
-                            onQuickView={onQuickView}
-                        />
-                    ))}
-                </div>
+                
+                {catalogProducts.length > 0 ? (
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        {catalogProducts.map(product => (
+                            <ProductCard
+                                key={product.id}
+                                product={product}
+                                currency={currency}
+                                onAddToCart={onAddToCart}
+                                onQuickAddToCart={onQuickAddToCart}
+                                onProductSelect={onProductSelect}
+                                onQuickView={onQuickView}
+                            />
+                        ))}
+                    </div>
+                ) : (
+                    <div className="text-center text-gray-500">Cargando productos destacados...</div>
+                )}
             </div>
 
             <div className="js-logout-data" data-url-eshoplogout="https://es-eshop.oriflame.com/iframe/internal/Services.aspx"></div>
