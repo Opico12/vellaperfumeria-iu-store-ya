@@ -234,7 +234,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currency, onCurrencyChange,
                         <NavLink onClick={() => onNavigate('ia')}>Asistente IA</NavLink>
                         <NavLink onClick={() => onNavigate('blog')}>Blog</NavLink>
 
-                        {/* MEGA MENU DROPDOWN (FULL WIDTH BLACK) - Fixed to be w-screen and centered */}
+                        {/* MEGA MENU DROPDOWN (FULL WIDTH BLACK) */}
                         <div 
                             className={`absolute top-full left-1/2 -translate-x-1/2 w-screen bg-black text-white shadow-2xl transition-all duration-300 transform origin-top z-50 border-t-2 border-[var(--color-primary-solid)] ${
                                 isMegaMenuOpen 
