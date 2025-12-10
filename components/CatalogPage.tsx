@@ -86,8 +86,9 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
         }
     };
 
-    // Featured catalog products for the list below (Safety check added)
-    const catalogProducts = (allProducts || []).slice(0, 8); 
+    // Featured catalog products with safety check.
+    // If allProducts is undefined, fallback to empty array to prevent white screen crash.
+    const catalogProducts = allProducts ? allProducts.slice(0, 8) : []; 
 
     return (
         <div className="w-full px-2 sm:px-4 py-6 bg-gray-50">
@@ -104,7 +105,7 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
                         <div className="text-center md:text-left">
                             <h1 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight font-serif">Catálogo Actual (C17)</h1>
                             <p className="text-sm text-gray-600 mt-1">
-                                Explora el Catálogo 17 y descubre las mejores ofertas de temporada.
+                                Explora el Catálogo 17 y descubre las mejores ofertas de Navidad.
                             </p>
                         </div>
                     </div>

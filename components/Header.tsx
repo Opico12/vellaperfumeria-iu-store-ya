@@ -81,7 +81,6 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currency, onCurrencyChange,
     const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
     const [vParam, setVParam] = useState<string | null>(null);
     const navRef = useRef<HTMLDivElement>(null);
-    const megaMenuRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         try {
@@ -235,9 +234,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currency, onCurrencyChange,
                         <NavLink onClick={() => onNavigate('ia')}>Asistente IA</NavLink>
                         <NavLink onClick={() => onNavigate('blog')}>Blog</NavLink>
 
-                        {/* MEGA MENU DROPDOWN (FULL WIDTH BLACK) */}
+                        {/* MEGA MENU DROPDOWN (FULL WIDTH BLACK) - Fixed to be w-screen and centered */}
                         <div 
-                            className={`absolute top-full left-0 w-full bg-black text-white shadow-2xl transition-all duration-300 transform origin-top z-50 border-t-2 border-[var(--color-primary-solid)] ${
+                            className={`absolute top-full left-1/2 -translate-x-1/2 w-screen bg-black text-white shadow-2xl transition-all duration-300 transform origin-top z-50 border-t-2 border-[var(--color-primary-solid)] ${
                                 isMegaMenuOpen 
                                     ? 'opacity-100 visible translate-y-0' 
                                     : 'opacity-0 invisible -translate-y-2 pointer-events-none'
