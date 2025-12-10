@@ -7,7 +7,7 @@ export const allProducts: Product[] = [
         id: 47188,
         name: "Iluminador Líquido Illuskin THE ONE",
         brand: "The ONE",
-        price: 9.99,
+        price: 8.99, // OFERTA C17
         regularPrice: 20.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F47188%2F47188_1.png&MediaId=20570078&Version=1&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Un iluminador líquido y ligero que aporta un brillo radiante y natural. Formulado con Tecnología Illuskin que refleja la luz y pigmentos perlados para un acabado luminoso. Úsalo solo o mézclalo con tu base para un glow espectacular.",
@@ -27,7 +27,7 @@ export const allProducts: Product[] = [
         id: 46134,
         name: "BB Cream Beautifier MAX SPF 15 THE ONE",
         brand: "The ONE",
-        price: 7.99,
+        price: 6.99, // OFERTA C17
         regularPrice: 17.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F46134%2F46134_1.png&MediaId=20038270&Version=4&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Descubre la perfección en un solo paso con nuestra BB Cream Beautifier MAX. Esta fórmula 10-en-1 hidrata profundamente, corrige imperfecciones, unifica el tono y protege tu piel con SPF 15. Su textura ligera se funde a la perfección para un acabado radiante y natural que dura todo el día.",
@@ -48,7 +48,7 @@ export const allProducts: Product[] = [
         id: 46901,
         name: "Perlas con Serum Giordani Gold - Edición Especial",
         brand: "Giordani Gold",
-        price: 18.99,
+        price: 17.99, // OFERTA C17
         regularPrice: 35.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F46901%2F46901_1.png&MediaId=20449670&Version=1&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Las icónicas perlas bronceadoras de Giordani Gold, ahora en una edición especial enriquecida con un serum antiedad. Aportan color, rubor y luminosidad con un acabado natural y juvenil gracias al ácido hialurónico.",
@@ -87,7 +87,7 @@ export const allProducts: Product[] = [
         id: 32922,
         name: "Maquillaje Liquid Silk Giordani Gold",
         brand: "Giordani Gold",
-        price: 12.99,
+        price: 11.99, // OFERTA C17
         regularPrice: 31.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F32922%2FES%2F32922_1.png&MediaId=17437265&Version=1&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Una base de maquillaje fluida y sedosa inspirada en la delicadeza de la seda. Perfecciona la tez con un acabado natural y luminoso, difuminando imperfecciones sin esfuerzo. Con SPF 12 para proteger la piel.",
@@ -108,7 +108,7 @@ export const allProducts: Product[] = [
         id: 42113,
         name: "Crema Correctora del Color SPF 30 + Protección UVA Giordani Gold",
         brand: "Giordani Gold",
-        price: 14.99,
+        price: 13.99, // OFERTA C17
         regularPrice: 30.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F42113%2F42113_1.png&MediaId=18141966&Version=2&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "CC Cream que combina maquillaje ligero con tratamiento. Unifica el tono, corrige imperfecciones y protege contra el envejecimiento prematuro gracias a su SPF 30 y protección UVA. Para una piel radiante y protegida.",
@@ -167,7 +167,7 @@ export const allProducts: Product[] = [
         id: 44917,
         name: "Perlas con Serum Giordani Gold",
         brand: "Giordani Gold",
-        price: 18.99,
+        price: 17.99, // OFERTA C17
         regularPrice: 35.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F44917%2F44917_1.png&MediaId=19190183&Version=2&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Las perlas icónicas de Giordani Gold, ahora infusionadas con serum y ácido hialurónico para un rostro radiante, juvenil y con un toque de color natural. Perfectas como bronceador o colorete.",
@@ -186,7 +186,7 @@ export const allProducts: Product[] = [
         id: 42121,
         name: "Paleta de Ojos y Rostro Fabulous Beauty Giordani Gold",
         brand: "Giordani Gold",
-        price: 29.99,
+        price: 27.99, // OFERTA C17
         regularPrice: 42.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F42121%2F42121_1.png&MediaId=19732116&Version=5&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Una paleta de lujo todo en uno que contiene todo lo que necesitas para un look completo: sombras de ojos, coloretes, bronceador e iluminador. Pigmentos intensos y texturas sedosas.",
@@ -200,7 +200,7 @@ export const allProducts: Product[] = [
         id: 42236,
         name: "Maquillaje Antienvejecimiento Serum Boost SPF 12 Giordani Gold",
         brand: "Giordani Gold",
-        price: 19.99,
+        price: 18.99, // OFERTA C17
         regularPrice: 31.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F42236%2F42236_1.png&MediaId=18407486&Version=5&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Una base de maquillaje que es un auténtico tratamiento. Con prebióticos y extractos naturales, mejora la barrera de la piel, hidrata y proporciona una cobertura perfecta para un rostro visiblemente más joven.",
@@ -221,7 +221,7 @@ export const allProducts: Product[] = [
         id: 42118,
         name: "Prebase y Serum Potenciador Giordani Gold",
         brand: "Giordani Gold",
-        price: 16.99,
+        price: 15.99, // OFERTA C17
         regularPrice: 27.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F42118%2FES%2F42118_1.png&MediaId=17440127&Version=3&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Prebase iluminadora con perlas que se funden en la piel para crear un lienzo perfecto y radiante. Enriquecida con ácido hialurónico, hidrata, suaviza y prolonga la duración del maquillaje.",
@@ -235,7 +235,7 @@ export const allProducts: Product[] = [
         id: 21339,
         name: "Solución Micelar Diamond Cellular",
         brand: "Diamond Cellular",
-        price: 14.99,
+        price: 13.99, // OFERTA C17
         regularPrice: 29.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F21339%2FES%2F21339_1.png&MediaId=14553125&Version=6&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Lujosa solución 3 en 1: limpia, tonifica y desmaquilla. Formulada con Tecnología Micelar y el exclusivo Elixir de Diamante para una piel limpia, fresca y luminosa al instante.",
@@ -249,7 +249,7 @@ export const allProducts: Product[] = [
         id: 38557,
         name: "Astaxantina y Extracto de Arándano Wellosophy",
         brand: "Wellosophy",
-        price: 24.99,
+        price: 23.99, // OFERTA C17
         regularPrice: 32.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F38557%2FES%2F38557_1.png&MediaId=16706466&Version=2&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Potente complemento alimenticio con antioxidantes naturales. La astaxantina, procedente de microalgas, y el extracto de arándano ayudan a proteger las células del estrés oxidativo. Incluye vitaminas C y E.",
@@ -263,7 +263,7 @@ export const allProducts: Product[] = [
         id: 38556,
         name: "Omega 3 Wellosophy",
         brand: "Wellosophy",
-        price: 17.99,
+        price: 16.99, // OFERTA C17
         regularPrice: 24.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F38556%2FES%2F38556_1.png&MediaId=16654614&Version=4&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Aceite de pescado de alta calidad, procedente de fuentes sostenibles y certificado por Friend of the Sea. Rico en ácidos grasos Omega 3 (EPA y DHA) que contribuyen al funcionamiento normal del corazón, cerebro y visión.",
@@ -277,7 +277,7 @@ export const allProducts: Product[] = [
         id: 42255,
         name: "Mascarilla Revitalizante Intensiva Acción Noche Novage+",
         brand: "Novage+",
-        price: 29.99,
+        price: 28.99, // OFERTA C17
         regularPrice: 39.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F42255%2F42255_1.png&MediaId=18501023&Version=2&w=600&bc=%23f5f5f5&ib=%23f5f5f5&h=600&q=90&imageFormat=WebP",
         description: "Una mascarilla nocturna intensiva que nutre profundamente y reduce los signos de fatiga. Enriquecida con aceite de Inca Inchi, manteca de Cupuaçu y ácido hialurónico, para despertar con una piel descansada, suave y radiante.",
@@ -335,7 +335,7 @@ export const allProducts: Product[] = [
         id: 46987,
         name: "Gel de Ducha con Mango Orgánico Simple Joys Love Nature",
         brand: "Love Nature",
-        price: 5.99,
+        price: 4.99, // OFERTA C17
         regularPrice: 10.00,
         imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F46987%2F46987_1.png',
         description: "Disfruta de una ducha tropical con este gel formulado con extracto de mango orgánico. Su aroma jugoso y exótico te transportará, mientras su fórmula suave y biodegradable cuida tu piel.",
@@ -349,7 +349,7 @@ export const allProducts: Product[] = [
         id: 47009,
         name: "Gel de Ducha con Aloe Vera Orgánico Simple Joys Love Nature",
         brand: "Love Nature",
-        price: 5.99,
+        price: 4.99, // OFERTA C17
         regularPrice: 10.00,
         imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F47009%2F47009_1.png',
         description: "Un gel de ducha hidratante y calmante enriquecido con Aloe Vera orgánico, conocido por sus propiedades suavizantes. Ideal para una limpieza refrescante que deja la piel confortable.",
@@ -363,7 +363,7 @@ export const allProducts: Product[] = [
         id: 46642,
         name: "Jabón Líquido Manos y Cuerpo Limón y Verbena Essense & Co",
         brand: "Essense&Co.",
-        price: 11.99,
+        price: 10.99, // OFERTA C17
         regularPrice: 20.00,
         imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F46642%2F46642_1.png',
         description: "Un elegante jabón líquido para manos y cuerpo con aceites esenciales naturales de limón y verbena. Su fórmula hidratante y su vibrante aroma cítrico convierten la limpieza diaria en un ritual de lujo.",
@@ -376,7 +376,7 @@ export const allProducts: Product[] = [
         id: 46801,
         name: "Eau de Parfum Divine Dark Velvet",
         brand: "Divine",
-        price: 21.99,
+        price: 19.99, // OFERTA C17
         regularPrice: 45.00,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F46801%2F46801_1.png",
         description: "Una fragancia Chipre Floral Amaderada que deja una estela hipnótica y duradera. Con notas de Grosella Negra, la flor de Datura y Sándalo. Un aroma sensual y misterioso, perfecto para la noche.",
@@ -390,7 +390,7 @@ export const allProducts: Product[] = [
         id: 46968,
         name: "Crema para Manos y Cuerpo Milk & Honey Gold",
         brand: "Milk & Honey Gold",
-        price: 9.99,
+        price: 8.99, // OFERTA C17
         regularPrice: 18.00,
         imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F46968%2F46968_1.png',
         description: "La legendaria crema nutritiva con extractos de origen orgánico de leche y miel. Hidrata intensamente manos y cuerpo, dejando la piel suave, flexible y delicadamente perfumada con su icónico aroma.",
@@ -404,7 +404,7 @@ export const allProducts: Product[] = [
         id: 36151,
         name: "Crema Universal con Aceite de Grosella Negra",
         brand: "Tender Care",
-        price: 4.99,
+        price: 3.99, // OFERTA C17
         regularPrice: 14.00,
         imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F36151%2F36151_1.png',
         description: "El bálsamo clásico y multiusos de Oriflame, ahora con un delicioso y afrutado toque de aceite de semilla de grosella negra. Nutre, suaviza y protege las zonas secas como labios, codos, cutículas y talones.",
@@ -432,7 +432,7 @@ export const allProducts: Product[] = [
         id: 47878,
         name: "Esponja de Baño Lather Lily",
         brand: "Love Nature",
-        price: 5.99,
+        price: 4.99, // OFERTA C17
         regularPrice: 9.50,
         imageUrl: "https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F47878%2F47878_1.png",
         description: "Esponja de baño suave y texturizada que genera abundante espuma para una ducha placentera y una limpieza eficaz. Ayuda a exfoliar suavemente la piel.",
@@ -446,7 +446,7 @@ export const allProducts: Product[] = [
         id: 47202,
         name: "Crema de Manos y Uñas Protectora con Fruta de la Pasión",
         brand: "Love Nature",
-        price: 3.99,
+        price: 2.99, // OFERTA C17
         regularPrice: 11.00,
         imageUrl: 'https://media-cdn.oriflame.com/productImage?externalMediaId=product-management-media%2FProducts%2F47202%2F47202_1.png',
         description: "Protege e hidrata tus manos y uñas con esta crema de rápida absorción y un exótico y jugoso aroma a fruta de la pasión. Perfecta para llevar en el bolso.",

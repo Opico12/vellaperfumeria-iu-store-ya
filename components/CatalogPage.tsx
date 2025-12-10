@@ -5,8 +5,8 @@ import { ProductCard } from './ProductCard';
 import type { Product } from './types';
 import type { Currency } from './currency';
 
-// URL del Catálogo 17 actualizada (como solicitado)
-const INTERACTIVE_CATALOG_URL = 'https://es-catalogue.oriflame.com/oriflame/es/2025017-brp?HideStandardUI=true&Page=1';
+// URL del Catálogo 17 (Navidad) - Usamos una URL genérica que redirige al actual para evitar errores 404
+const INTERACTIVE_CATALOG_URL = 'https://es-catalogue.oriflame.com/oriflame/es/2024017?HideStandardUI=true&Page=1';
 const FALLBACK_CATALOG_URL = 'https://es.oriflame.com/products/digital-catalogue-current';
 
 interface CatalogPageProps {
@@ -86,7 +86,7 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
         }
     };
 
-    // Featured catalog products for the list below (Safety check added to prevent blank screen)
+    // Featured catalog products for the list below (Safety check added)
     const catalogProducts = (allProducts || []).slice(0, 8); 
 
     return (
@@ -102,32 +102,49 @@ const CatalogPage: React.FC<CatalogPageProps> = ({ onAddToCart, onQuickAddToCart
                             className="h-20 w-auto object-contain" 
                         />
                         <div className="text-center md:text-left">
-                            <h1 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight font-serif">Catálogo Actual (C17)</h1>
+                            <h1 className="text-3xl md:text-4xl font-extrabold text-black tracking-tight font-serif">Catálogo Navidad (C17)</h1>
                             <p className="text-sm text-gray-600 mt-1">
                                 Explora el Catálogo 17 y descubre las mejores ofertas de temporada.
                             </p>
                         </div>
                     </div>
                     
-                    <div 
-                        className="relative w-full flex-grow bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-200" 
-                        style={{ minHeight: '80vh' }} 
-                    >
+                    <div className="relative w-full flex-grow bg-white rounded-lg shadow-2xl overflow-hidden border border-gray-200" style={{ minHeight: '80vh' }}>
+                        {/* Iframe with sandbox to prevent redirects/blank screens */}
                         <iframe
                             id="ipaper-catalogue"
-                            data-ipaper="true"
-                            data-testid="Presentation-catalogue-ipaper-iframe"
                             src={INTERACTIVE_CATALOG_URL}
                             title="Catálogo Digital BeautyShopVella"
-                            className="w-full h-full absolute inset-0 products-app-emotion-z39r5g"
+                            className="w-full h-full absolute inset-0 bg-gray-100"
                             frameBorder="0"
                             allowFullScreen
                             loading="lazy"
+                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                         />
+                        {/* Fallback link overlay in case iframe fails to load visually */}
+                        <div className="absolute top-0 right-0 p-2 z-10">
+                             <a 
+                                href={FALLBACK_CATALOG_URL} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="bg-black/80 text-white text-xs px-3 py-1 rounded hover:bg-black transition-colors"
+                             >
+                                 Abrir en nueva pestaña ↗
+                             </a>
+                        </div>
                     </div>
-                    <div className="text-center mt-4">
-                        <a href={FALLBACK_CATALOG_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 hover:text-fuchsia-700 hover:underline font-medium">
-                            ¿No puedes ver el catálogo? Abrir en ventana externa
+                    
+                    <div className="text-center mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-md">
+                        <p className="text-sm text-yellow-800 mb-2">
+                            ¿No ves el catálogo correctamente?
+                        </p>
+                        <a 
+                            href={FALLBACK_CATALOG_URL} 
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            className="inline-block bg-black text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-gray-800 transition-colors"
+                        >
+                            Abrir Catálogo PDF Completo
                         </a>
                     </div>
                 </div>
